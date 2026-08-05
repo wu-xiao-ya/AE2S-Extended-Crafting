@@ -110,9 +110,10 @@ jar {
     manifest {
         attributes([
                 'Specification-Title'   : project.mod_name,
-                'Specification-Vendor'  : 'Codex',
+                'Specification-Vendor'  : 'WuXiaoYa',
                 'Implementation-Title'  : project.mod_id,
-                'Implementation-Version': project.version
+                'Implementation-Version': project.version,
+                'Implementation-Vendor' : 'WuXiaoYa'
         ])
     }
 }

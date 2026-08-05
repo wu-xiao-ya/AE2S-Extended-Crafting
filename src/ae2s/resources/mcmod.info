@@ -7,8 +7,8 @@
   "mcversion": "${minecraft_version}",
   "url": "https://github.com/wu-xiao-ya/AE2S-Extended-Crafting",
   "updateUrl": "",
-  "authorList": ["GaLi", "Codex"],
-  "credits": "Forked from Applied Extended Crafting and adapted as AE2S pattern provider assembly stations.",
+  "authorList": ["WuXiaoYa"],
+  "credits": "Original mod by GaLi; AE2S addon fork maintained by WuXiaoYa.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": ["ae2", "extendedcrafting"]

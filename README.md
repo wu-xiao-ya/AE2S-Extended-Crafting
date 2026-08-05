@@ -2,6 +2,8 @@
 
 Fork of `GaLicn/Applied-Extended-Crafting`, retargeted from standalone AE2 pattern-provider blocks to an AE2S addon for Minecraft 1.12.2/Cleanroom.
 
+Author: WuXiaoYa. Original author: GaLi.
+
 ## Current AE2S Route
 
 This fork adds AE2S Pattern Provider style assembly stations for Extended Crafting recipes. It does not add a new pattern item and it does not convert AE2S patterns. Encode an ordinary AE2S processing pattern in the AE2S pattern terminal, then place or upload that pattern into the matching assembly station.
