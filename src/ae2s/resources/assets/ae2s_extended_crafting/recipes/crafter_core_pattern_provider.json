@@ -1,0 +1,19 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": { "item": "extendedcrafting:material", "data": 24 },
+    "B": { "item": "extendedcrafting:material", "data": 12 },
+    "C": { "item": "extendedcrafting:material", "data": 18 },
+    "D": { "item": "extendedcrafting:crafting_core" },
+    "E": { "item": "ae2:molecular_assembler" }
+  },
+  "result": {
+    "item": "ae2s_extended_crafting:crafter_core_pattern_provider",
+    "count": 1
+  }
+}

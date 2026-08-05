@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ae2s_extended_crafting:blocks/table_elite"
+  }
+}

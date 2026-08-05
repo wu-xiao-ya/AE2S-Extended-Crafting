@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "push_direction=all": { "model": "ae2s_extended_crafting:table_advanced_pattern_provider_stable" },
+    "push_direction=down": { "model": "ae2s_extended_crafting:table_advanced_pattern_provider_stable" },
+    "push_direction=east": { "model": "ae2s_extended_crafting:table_advanced_pattern_provider_stable" },
+    "push_direction=north": { "model": "ae2s_extended_crafting:table_advanced_pattern_provider_stable" },
+    "push_direction=south": { "model": "ae2s_extended_crafting:table_advanced_pattern_provider_stable" },
+    "push_direction=up": { "model": "ae2s_extended_crafting:table_advanced_pattern_provider_stable" },
+    "push_direction=west": { "model": "ae2s_extended_crafting:table_advanced_pattern_provider_stable" }
+  }
+}
