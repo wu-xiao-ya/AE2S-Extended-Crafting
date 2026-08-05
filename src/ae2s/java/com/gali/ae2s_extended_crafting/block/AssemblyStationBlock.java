@@ -3,9 +3,9 @@ package com.gali.ae2s_extended_crafting.block;
 import ae2.api.networking.extensions.GridLogicExtensions;
 import ae2.block.crafting.PatternProviderBlock;
 import ae2.block.crafting.PushDirection;
-import ae2.core.gui.locator.GuiHostLocators;
 import ae2.util.InteractionUtil;
 import ae2.util.Platform;
+import com.gali.ae2s_extended_crafting.gui.ModGuiHandler;
 import com.gali.ae2s_extended_crafting.tile.AbstractAssemblyStationTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
@@ -105,7 +105,7 @@ public class AssemblyStationBlock<T extends AbstractAssemblyStationTile<?>> exte
         }
 
         if (!world.isRemote) {
-            tile.openGui(player, GuiHostLocators.forTile(tile));
+            ModGuiHandler.openPatternProvider(player, tile);
         }
         return true;
     }

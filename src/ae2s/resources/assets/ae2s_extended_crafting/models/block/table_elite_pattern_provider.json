@@ -5,7 +5,6 @@
     "particle": "ae2s_extended_crafting:block/table_elite",
     "base": "ae2s_extended_crafting:block/table_elite"
   },
-  "render_type": "translucent",
   "elements": [
     {
       "from": [

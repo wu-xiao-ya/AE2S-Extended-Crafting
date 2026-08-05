@@ -1,5 +1,5 @@
 {
-  "parent": "ae2s_extended_crafting:block/crafter_core_pattern_provider_stable",
+  "parent": "ae2s_extended_crafting:block/crafter_core_pattern_provider",
   "display": {
     "gui": {
       "rotation": [29, 225, 0],
