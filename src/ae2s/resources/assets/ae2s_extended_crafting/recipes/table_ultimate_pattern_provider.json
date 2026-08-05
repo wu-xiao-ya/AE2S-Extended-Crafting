@@ -3,14 +3,15 @@
   "pattern": [
     "ABA",
     "CDE",
-    "ABA"
+    "AFA"
   ],
   "key": {
     "A": { "item": "minecraft:emerald" },
     "B": { "item": "ae2:quartz_glass" },
     "C": { "item": "ae2:annihilation_core" },
     "D": { "item": "extendedcrafting:table_ultimate" },
-    "E": { "item": "ae2:formation_core" }
+    "E": { "item": "ae2:formation_core" },
+    "F": { "item": "ae2:molecular_assembler" }
   },
   "result": {
     "item": "ae2s_extended_crafting:table_ultimate_pattern_provider",
