@@ -9,8 +9,12 @@ import ae2.core.gui.locator.GuiHostLocators;
 import com.gali.ae2s_extended_crafting.AE2SExtendedCrafting;
 import com.gali.ae2s_extended_crafting.tile.AbstractAssemblyStationTile;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 
@@ -48,7 +52,7 @@ public final class ModGuiHandler implements IGuiHandler {
         return new GuiPatternProvider(
                 container,
                 player.inventory,
-                null,
+                getAssemblyStationTitle(tile),
                 GuiStyleManager.loadStyleDoc(PATTERN_PROVIDER_STYLE)
         );
     }
@@ -63,6 +67,21 @@ public final class ModGuiHandler implements IGuiHandler {
             return (AbstractAssemblyStationTile<?>) tile;
         }
         return null;
+    }
+
+    private static ITextComponent getAssemblyStationTitle(AbstractAssemblyStationTile<?> tile) {
+        World world = tile.getWorld();
+        if (world == null || tile.getPos() == null) {
+            return null;
+        }
+
+        IBlockState state = world.getBlockState(tile.getPos());
+        if (state == null || state.getBlock() == null || state.getBlock().getRegistryName() == null) {
+            return null;
+        }
+
+        ResourceLocation id = state.getBlock().getRegistryName();
+        return new TextComponentTranslation("tile." + id.getNamespace() + "." + id.getPath() + ".name");
     }
 
     private static <C extends AEBaseContainer> C initTileContainer(C container, TileEntity tile) {
