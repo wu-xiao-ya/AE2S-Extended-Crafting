@@ -14,6 +14,7 @@ Supported now:
 
 - Basic, Advanced, Elite, and Ultimate table assembly stations for 3x3, 5x5, 7x7, and 9x9 Extended Crafting table recipes.
 - Crafting Core assembly station for Extended Crafting Combination recipes.
+- Ender Crafter assembly station for Extended Crafting Ender Crafter recipes.
 - AE2S Pattern Access Terminal support through the native Pattern Provider container path.
 - Automatic pattern recognition: unsupported processing patterns are hidden from the network and rejected by the station inventory.
 - High-version Applied Extended Crafting block models and textures, backported into the AE2S 1.12 resource namespace.
@@ -30,7 +31,9 @@ Workflow:
 
 Table stations finish immediately and return the crafted output to the ME network. The Crafting Core station uses the Extended Crafting Combination recipe cost and per-tick rate, drawing AE power from the network before returning the result.
 
-Ender Crafter, Flux Crafter, and Compressor recipes are intentionally separate follow-ups. Those recipe families carry different timing or machine-state rules and should get their own station behavior.
+The Ender Crafter station scans the same 3-block radius for Ender Alternators as Extended Crafting's native Ender Crafter. It pauses without an alternator, reduces processing time using the configured alternator effectiveness, and also applies installed AE2S Speed Cards to timed jobs.
+
+Flux Crafter and Compressor recipes are intentionally separate follow-ups. Those recipe families carry different timing or machine-state rules and should get their own station behavior.
 
 ## Build Notes
 

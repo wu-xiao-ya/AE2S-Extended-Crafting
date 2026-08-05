@@ -1,6 +1,7 @@
 package com.gali.ae2s_extended_crafting.init;
 
 import com.gali.ae2s_extended_crafting.tile.CrafterCoreAssemblyStationTile;
+import com.gali.ae2s_extended_crafting.tile.EnderCrafterAssemblyStationTile;
 import com.gali.ae2s_extended_crafting.tile.TableAdvancedAssemblyStationTile;
 import com.gali.ae2s_extended_crafting.tile.TableBasicAssemblyStationTile;
 import com.gali.ae2s_extended_crafting.tile.TableEliteAssemblyStationTile;
@@ -22,5 +23,7 @@ public final class ModTiles {
                 ModBlocks.id("table_ultimate_pattern_provider"));
         GameRegistry.registerTileEntity(CrafterCoreAssemblyStationTile.class,
                 ModBlocks.id("crafter_core_pattern_provider"));
+        GameRegistry.registerTileEntity(EnderCrafterAssemblyStationTile.class,
+                ModBlocks.id("ender_crafter_pattern_provider"));
     }
 }

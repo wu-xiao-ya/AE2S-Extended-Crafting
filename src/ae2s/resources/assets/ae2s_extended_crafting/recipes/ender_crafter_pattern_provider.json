@@ -1,0 +1,19 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "ABA",
+    "CDE",
+    "ABA"
+  ],
+  "key": {
+    "A": { "item": "extendedcrafting:material", "data": 48 },
+    "B": { "item": "extendedcrafting:material", "data": 40 },
+    "C": { "item": "ae2:annihilation_core" },
+    "D": { "item": "extendedcrafting:ender_crafter" },
+    "E": { "item": "ae2:formation_core" }
+  },
+  "result": {
+    "item": "ae2s_extended_crafting:ender_crafter_pattern_provider",
+    "count": 1
+  }
+}

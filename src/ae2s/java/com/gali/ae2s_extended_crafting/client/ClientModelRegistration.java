@@ -23,6 +23,7 @@ public final class ClientModelRegistration {
         registerBlockItem(ModBlocks.TABLE_ELITE_PATTERN_PROVIDER);
         registerBlockItem(ModBlocks.TABLE_ULTIMATE_PATTERN_PROVIDER);
         registerBlockItem(ModBlocks.CRAFTER_CORE_PATTERN_PROVIDER);
+        registerBlockItem(ModBlocks.ENDER_CRAFTER_PATTERN_PROVIDER);
     }
 
     private static void registerBlockItem(BlockDefinition<?> definition) {

@@ -194,6 +194,26 @@ public abstract class AbstractAssemblyStationTile<M> extends AENetworkedTile
         return 1;
     }
 
+    protected double getSpeedMultiplier() {
+        int speedCards = getInstalledUpgrades(AEItems.SPEED_CARD.item());
+        if (speedCards == 1) {
+            return 1.3;
+        }
+        if (speedCards == 2) {
+            return 1.7;
+        }
+        if (speedCards == 3) {
+            return 2.0;
+        }
+        if (speedCards == 4) {
+            return 2.5;
+        }
+        if (speedCards >= 5) {
+            return 5.0;
+        }
+        return 1.0;
+    }
+
     protected boolean pushMatchedPattern(IPatternDetails pattern, M match, KeyCounter[] inputHolder, int multiplier) {
         return enqueueMatchedOutputs(pattern, match, multiplier);
     }

@@ -25,6 +25,7 @@ public final class ModUpgrades {
         registerStation(ModBlocks.TABLE_ELITE_PATTERN_PROVIDER.item(), patternExpansionLimit, "table_elite");
         registerStation(ModBlocks.TABLE_ULTIMATE_PATTERN_PROVIDER.item(), patternExpansionLimit, "table_ultimate");
         registerStation(ModBlocks.CRAFTER_CORE_PATTERN_PROVIDER.item(), patternExpansionLimit, "crafter_core");
+        registerStation(ModBlocks.ENDER_CRAFTER_PATTERN_PROVIDER.item(), patternExpansionLimit, "ender_crafter");
 
         registered = true;
     }

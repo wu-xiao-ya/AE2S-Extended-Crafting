@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "ae2s_extended_crafting:blocks/ender_crafter_side",
+    "down": "ae2s_extended_crafting:blocks/ender_crafter_side",
+    "up": "ae2s_extended_crafting:blocks/ender_crafter_top",
+    "north": "ae2s_extended_crafting:blocks/ender_crafter_side",
+    "east": "ae2s_extended_crafting:blocks/ender_crafter_side",
+    "south": "ae2s_extended_crafting:blocks/ender_crafter_side",
+    "west": "ae2s_extended_crafting:blocks/ender_crafter_side"
+  }
+}

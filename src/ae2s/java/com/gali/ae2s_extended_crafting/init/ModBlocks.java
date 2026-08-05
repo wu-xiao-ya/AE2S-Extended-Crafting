@@ -5,6 +5,7 @@ import com.gali.ae2s_extended_crafting.AE2SExtendedCrafting;
 import com.gali.ae2s_extended_crafting.block.AssemblyStationBlock;
 import com.gali.ae2s_extended_crafting.tile.AbstractAssemblyStationTile;
 import com.gali.ae2s_extended_crafting.tile.CrafterCoreAssemblyStationTile;
+import com.gali.ae2s_extended_crafting.tile.EnderCrafterAssemblyStationTile;
 import com.gali.ae2s_extended_crafting.tile.TableAdvancedAssemblyStationTile;
 import com.gali.ae2s_extended_crafting.tile.TableBasicAssemblyStationTile;
 import com.gali.ae2s_extended_crafting.tile.TableEliteAssemblyStationTile;
@@ -25,13 +26,16 @@ public final class ModBlocks {
             table("Ultimate Table Assembly Station", "table_ultimate_pattern_provider", TableUltimateAssemblyStationTile.class);
     public static final BlockDefinition<AssemblyStationBlock<CrafterCoreAssemblyStationTile>> CRAFTER_CORE_PATTERN_PROVIDER =
             table("Crafting Core Assembly Station", "crafter_core_pattern_provider", CrafterCoreAssemblyStationTile.class);
+    public static final BlockDefinition<AssemblyStationBlock<EnderCrafterAssemblyStationTile>> ENDER_CRAFTER_PATTERN_PROVIDER =
+            table("Ender Crafter Assembly Station", "ender_crafter_pattern_provider", EnderCrafterAssemblyStationTile.class);
 
     private static final BlockDefinition<?>[] ALL = new BlockDefinition[]{
             TABLE_BASIC_PATTERN_PROVIDER,
             TABLE_ADVANCED_PATTERN_PROVIDER,
             TABLE_ELITE_PATTERN_PROVIDER,
             TABLE_ULTIMATE_PATTERN_PROVIDER,
-            CRAFTER_CORE_PATTERN_PROVIDER
+            CRAFTER_CORE_PATTERN_PROVIDER,
+            ENDER_CRAFTER_PATTERN_PROVIDER
     };
 
     private ModBlocks() {

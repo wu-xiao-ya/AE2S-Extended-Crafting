@@ -5,7 +5,6 @@ import ae2.api.config.PowerMultiplier;
 import ae2.api.crafting.IPatternDetails;
 import ae2.api.stacks.GenericStack;
 import ae2.api.stacks.KeyCounter;
-import ae2.core.definitions.AEItems;
 import com.blakebr0.extendedcrafting.crafting.CombinationRecipe;
 import com.gali.ae2s_extended_crafting.init.ModBlocks;
 import com.gali.ae2s_extended_crafting.matcher.CombinationRecipeMatcher;
@@ -152,25 +151,5 @@ public class CrafterCoreAssemblyStationTile extends AbstractAssemblyStationTile<
     private int getSpeedAdjustedPowerRate(int baseRate) {
         double adjusted = Math.ceil(Math.max(1, baseRate) * getSpeedMultiplier());
         return adjusted >= Integer.MAX_VALUE ? Integer.MAX_VALUE : Math.max(1, (int) adjusted);
-    }
-
-    private double getSpeedMultiplier() {
-        int speedCards = getInstalledUpgrades(AEItems.SPEED_CARD.item());
-        if (speedCards == 1) {
-            return 1.3;
-        }
-        if (speedCards == 2) {
-            return 1.7;
-        }
-        if (speedCards == 3) {
-            return 2.0;
-        }
-        if (speedCards == 4) {
-            return 2.5;
-        }
-        if (speedCards >= 5) {
-            return 5.0;
-        }
-        return 1.0;
     }
 }
