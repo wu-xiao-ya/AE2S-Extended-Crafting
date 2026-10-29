@@ -16,13 +16,13 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
         modid = AE2SExtendedCrafting.MODID,
         name = AE2SExtendedCrafting.NAME,
         version = AE2SExtendedCrafting.VERSION,
-        dependencies = "required-after:ae2;required-after:extendedcrafting"
+        dependencies = "required-after:ae2@[1.1.0,);required-after:extendedcrafting"
 )
 @Mod.EventBusSubscriber
 public final class AE2SExtendedCrafting {
     public static final String MODID = "ae2s_extended_crafting";
     public static final String NAME = "AE2S Extended Crafting";
-    public static final String VERSION = "0.1.0-dev";
+    public static final String VERSION = "0.1.1-dev";
 
     @Mod.Instance(MODID)
     public static AE2SExtendedCrafting INSTANCE;

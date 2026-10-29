@@ -37,15 +37,15 @@ Flux Crafter and Compressor recipes are intentionally separate follow-ups. Those
 
 ## Build Notes
 
-The project uses RetrofuturaGradle for Minecraft 1.12.2 and compiles against the current AE2S target, `1.0.10+552188496`, matching the Starlight Tech McPatch client pack. Runtime API calls are written for this AE2S line, not for the older `1.0.9` storage signature.
+The project uses RetrofuturaGradle for Minecraft 1.12.2/Cleanroom and targets AE2S `1.1.0`. Older AE2S versions are not supported by this build.
 
 The AE2S dependency jar is expected at one of:
 
-- `libs/AppliedEnergistics2-Supergiant-1.0.10+552188496-dev.jar`
-- `libs/AppliedEnergistics2-Supergiant-1.0.10+552188496.jar`
+- `libs/AppliedEnergistics2-Supergiant-1.1.0-dev.jar` (preferred for compilation)
+- `libs/AppliedEnergistics2-Supergiant-1.1.0.jar`
 
-It is copied from the local Gradle cache or the target pack on this machine during setup, not committed upstream by design.
+Download the dependency from the [official AE2S v1.1.0 release](https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/tag/v1.1.0). Dependency jars are not committed upstream. Use the regular (non-dev) jar in your game instance, not the development jar.
 
-Build with a modern JDK:
+Build with JDK 25 (the configured compilation toolchain):
 
 `gradle --no-daemon jar`

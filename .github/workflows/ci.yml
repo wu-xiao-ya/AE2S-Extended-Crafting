@@ -27,7 +27,6 @@ jobs:
         with:
           distribution: temurin
           java-version: '25'
-          cache: gradle
 
       - name: Download AE2S dependency
         shell: bash
@@ -35,10 +34,23 @@ jobs:
           set -euo pipefail
           ae2s_version="$(grep '^ae2s_version=' gradle.properties | cut -d= -f2)"
           mkdir -p libs
-          curl -fL \
-            "https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/download/dev/AppliedEnergistics2-Supergiant-1.0.10%2B29995921c.jar" \
-            -o "libs/AppliedEnergistics2-Supergiant-${ae2s_version}.jar"
+          dependency="libs/AppliedEnergistics2-Supergiant-${ae2s_version}-dev.jar"
+          curl -fL --retry 3 \
+            "https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/releases/download/v${ae2s_version}/AppliedEnergistics2-Supergiant-${ae2s_version}-dev.jar" \
+            -o "$dependency"
+          echo "71e1bc6873840bf94b792ee6bbfc1d0ccdc41d734d2e134d9707955778970524  $dependency" | sha256sum --check
 
-      # GitHub-hosted Ubuntu runners already include Gradle 9.6.1.
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.6.0'
+
       - name: Build
-        run: gradle --no-daemon --stacktrace clean jar
+        run: gradle --no-daemon --stacktrace clean build
+
+      - name: Upload jars
+        uses: actions/upload-artifact@v4
+        with:
+          name: ae2s-extended-crafting
+          path: build/libs/*.jar
+          if-no-files-found: error
