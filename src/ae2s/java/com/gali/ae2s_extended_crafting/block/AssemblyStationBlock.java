@@ -121,7 +121,7 @@ public class AssemblyStationBlock<T extends AbstractAssemblyStationTile<?>> exte
         }
 
         ItemStack held = player.getHeldItem(hand);
-        if (!held.isEmpty() && InteractionUtil.canWrenchRotate(player, held, pos)) {
+        if (!held.isEmpty() && InteractionUtil.canWrenchRotate(player, held, pos, state)) {
             if (!world.isRemote) {
                 setSide(world, pos, facing);
             }
