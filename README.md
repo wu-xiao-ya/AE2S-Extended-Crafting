@@ -35,6 +35,14 @@ The Ender Crafter station scans the same 3-block radius for Ender Alternators as
 
 Flux Crafter and Compressor recipes are intentionally separate follow-ups. Those recipe families carry different timing or machine-state rules and should get their own station behavior.
 
+## Crafting Item Display
+
+The four table assembly stations briefly render the primary crafted output inside their frame after a successful craft. The display lasts 10 game ticks (about half a second); continuous crafting refreshes it. Only one item is drawn regardless of parallel batch size, and the last successful craft in a tick determines the displayed item. Failed recipe pushes do not trigger a display.
+
+The client stops drawing this item beyond 32 blocks and retains normal view-frustum culling. Display state uses the existing tile update / chunk tracking mechanism, not a separate 32-block packet broadcast. Same-tick changes are coalesced into a single visual update per station tick. Display items are transient copies with count 1, preserve item metadata/NBT for appearance, and do not affect crafting or output inventories. They are not saved to disk.
+
+Crafting Core and Ender Crafter stations are opaque and intentionally have no item renderer or additional display synchronization. Item drawing is adapted from the [AE2S v1.1.0 Molecular Assembler renderer](https://github.com/FormlessDragon/Applied-Energistics-2-Supergiant/blob/v1.1.0/src/main/java/ae2/client/render/tesr/MolecularAssemblerTESR.java), with its LGPL notice retained. In-game visual placement, distance transitions, multiplayer chunk reload behavior and dedicated-server loading still require verification.
+
 ## JEI / HEI Integration
 
 When JEI or HEI is installed, the assembly stations are listed as recipe catalysts on the left of Extended Crafting's existing recipe pages:

@@ -3,6 +3,11 @@ package com.gali.ae2s_extended_crafting.client;
 import ae2.core.definitions.BlockDefinition;
 import com.gali.ae2s_extended_crafting.AE2SExtendedCrafting;
 import com.gali.ae2s_extended_crafting.init.ModBlocks;
+import com.gali.ae2s_extended_crafting.tile.TableBasicAssemblyStationTile;
+import com.gali.ae2s_extended_crafting.tile.TableAdvancedAssemblyStationTile;
+import com.gali.ae2s_extended_crafting.tile.TableEliteAssemblyStationTile;
+import com.gali.ae2s_extended_crafting.tile.TableUltimateAssemblyStationTile;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -18,6 +23,11 @@ public final class ClientModelRegistration {
 
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
+        TableAssemblyStationRenderer renderer = new TableAssemblyStationRenderer();
+        ClientRegistry.bindTileEntitySpecialRenderer(TableBasicAssemblyStationTile.class, renderer);
+        ClientRegistry.bindTileEntitySpecialRenderer(TableAdvancedAssemblyStationTile.class, renderer);
+        ClientRegistry.bindTileEntitySpecialRenderer(TableEliteAssemblyStationTile.class, renderer);
+        ClientRegistry.bindTileEntitySpecialRenderer(TableUltimateAssemblyStationTile.class, renderer);
         registerBlockItem(ModBlocks.TABLE_BASIC_PATTERN_PROVIDER);
         registerBlockItem(ModBlocks.TABLE_ADVANCED_PATTERN_PROVIDER);
         registerBlockItem(ModBlocks.TABLE_ELITE_PATTERN_PROVIDER);
