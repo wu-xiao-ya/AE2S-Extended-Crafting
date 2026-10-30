@@ -22,7 +22,7 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 public final class AE2SExtendedCrafting {
     public static final String MODID = "ae2s_extended_crafting";
     public static final String NAME = "AE2S Extended Crafting";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.0.1";
 
     @Mod.Instance(MODID)
     public static AE2SExtendedCrafting INSTANCE;
