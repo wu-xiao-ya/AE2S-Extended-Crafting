@@ -28,6 +28,13 @@ tasks.withType(JavaCompile).configureEach {
 repositories {
     mavenCentral()
     maven {
+        name 'JEI'
+        url 'https://dvs1.progwml6.com/files/maven'
+        content {
+            includeGroup 'mezz.jei'
+        }
+    }
+    maven {
         name 'CleanroomMC'
         url 'https://maven.cleanroommc.com'
     }
@@ -83,6 +90,7 @@ dependencies {
     compileOnly "curse.maven:extended-crafting-268387:${project.extended_crafting_file_id}"
     runtimeOnly "curse.maven:extended-crafting-268387:${project.extended_crafting_file_id}"
 
+    compileOnly 'mezz.jei:jei_1.12.2:4.15.0.268:api'
     compileOnly 'org.jetbrains:annotations:24.1.0'
 }
 

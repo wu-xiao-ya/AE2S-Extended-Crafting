@@ -35,6 +35,21 @@ The Ender Crafter station scans the same 3-block radius for Ender Alternators as
 
 Flux Crafter and Compressor recipes are intentionally separate follow-ups. Those recipe families carry different timing or machine-state rules and should get their own station behavior.
 
+## JEI / HEI Integration
+
+When JEI or HEI is installed, the assembly stations are listed as recipe catalysts on the left of Extended Crafting's existing recipe pages:
+
+| Recipe category | Assembly station |
+| --- | --- |
+| Basic crafting (3x3) | Basic Table |
+| Advanced crafting (5x5) | Advanced Table |
+| Elite crafting (7x7) | Elite Table |
+| Ultimate crafting (9x9) | Ultimate Table |
+| Combination crafting | Crafting Core |
+| Ender crafting | Ender Crafter |
+
+Original catalysts and recipes are preserved. Categories disabled in Extended Crafting's configuration do not receive catalysts. This integration only adds machine entries: it does not transfer ingredients or encode patterns with the recipe transfer button. JEI/HEI is optional and is not bundled in the addon; the plugin uses the JEI 1.12 API shared by HEI. Client behavior in each viewer and dedicated-server loading still require in-game verification.
+
 ## Build Notes
 
 The project uses RetrofuturaGradle for Minecraft 1.12.2/Cleanroom and targets AE2S `1.1.0`. Older AE2S versions are not supported by this build.
